@@ -309,6 +309,11 @@ open class EMPageViewController: UIViewController, UIScrollViewDelegate {
         self.layoutViews()
     }
     
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.scrollView.frame = self.view.bounds
+    }
     
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
